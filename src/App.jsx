@@ -14,17 +14,17 @@ function App() {
       title: "Creamy Chicken",
     },
     {
-      image: "/images/recipe2.jpg",
+      image: "https://pinchofyum.com/tachyon/Gochujang-Noodles-3.jpg?resize=840%2C1200&zoom=0.5",
       category: "QUICK AND EASY",
       title: "Spicy Noodles",
     },
     {
-      image: "/images/recipe3.jpg",
+      image: "https://pinchofyum.com/tachyon/Crunch-Roll-Bowls-2.jpg?resize=840%2C1200&zoom=0.5",
       category: "HEALTHY",
       title: "Fresh Green Bowl",
     },
     {
-      image: "/images/recipe4.jpg",
+      image: "https://pinchofyum.com/tachyon/Walnut-Meatballs-2.jpg?resize=840%2C1200&zoom=0.5",
       category: "TOMATO",
       title: "Meatballs & Vegetables",
     },
