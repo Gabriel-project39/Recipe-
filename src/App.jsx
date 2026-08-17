@@ -1,32 +1,25 @@
-import { useState } from 'react'
-
-import {
-  FaSearch,
-  FaHeart,
-  FaBars,
-} from "react-icons/fa";
+import { useState } from "react";
+import { FaSearch, FaHeart, FaBars, FaTimes } from "react-icons/fa";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const recipes = [
     {
       image: "https://pinchofyum.com/tachyon/Chicken-Caesar-Smash-Tacos.jpg?resize=840%2C1200&zoom=0.5",
       category: "DINNER",
-      title: "Creamy Chicken",
     },
     {
       image: "https://pinchofyum.com/tachyon/Gochujang-Noodles-3.jpg?resize=840%2C1200&zoom=0.5",
       category: "QUICK AND EASY",
-      title: "Spicy Noodles",
     },
     {
       image: "https://pinchofyum.com/tachyon/Crunch-Roll-Bowls-2.jpg?resize=840%2C1200&zoom=0.5",
       category: "HEALTHY",
-      title: "Fresh Green Bowl",
     },
     {
       image: "https://pinchofyum.com/tachyon/Walnut-Meatballs-2.jpg?resize=840%2C1200&zoom=0.5",
       category: "TOMATO",
-      title: "Meatballs & Vegetables",
     },
   ];
 
@@ -35,73 +28,137 @@ function App() {
 
       {/* ================= NAVBAR ================= */}
       <header className="bg-[#111111] border-b border-gray-700">
-        <div className="max-w-[1400px] mx-auto px-8">
 
-          <div className="h-28 flex items-center justify-between">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-8">
+
+          <div className="h-24 flex items-center justify-between">
 
             {/* LOGO */}
-            <div className="text-5xl font-serif">
-              <span className="text-[#e0a0c7]">
-                pinch
-              </span>
-
-              <span className="text-gray-400">
-                of
-              </span>
-
-              <span className="text-[#e0a0c7]">
-                yum
-              </span>
+            <div className="text-4xl md:text-5xl font-serif">
+              <span className="text-[#e0a0c7]">pinch</span>
+              <span className="text-gray-400">of</span>
+              <span className="text-[#e0a0c7]">yum</span>
             </div>
 
 
-            {/* NAVIGATION */}
-            <nav className="hidden md:flex items-center gap-12">
+            {/* ================= DESKTOP MENU ================= */}
+            <nav className="hidden md:flex items-center gap-10">
 
               <a
                 href="#home"
-                className="font-bold text-lg hover:text-[#e0a0c7] transition"
+                className="font-bold hover:text-[#e0a0c7] transition"
               >
                 HOME
               </a>
 
               <a
                 href="#about"
-                className="font-bold text-lg hover:text-[#e0a0c7] transition"
+                className="font-bold hover:text-[#e0a0c7] transition"
               >
                 ABOUT
               </a>
 
               <a
                 href="#recipes"
-                className="font-bold text-lg hover:text-[#e0a0c7] transition"
+                className="font-bold hover:text-[#e0a0c7] transition"
               >
                 RECIPES
               </a>
 
               <a
                 href="#start"
-                className="font-bold text-lg hover:text-[#e0a0c7] transition"
+                className="font-bold hover:text-[#e0a0c7] transition"
               >
                 START HERE
               </a>
 
-              <button className="text-[#e0a0c7] text-2xl hover:scale-110 transition">
+              <button className="text-[#e0a0c7] text-xl">
                 <FaSearch />
               </button>
 
             </nav>
 
 
+            {/* ================= HAMBURGER ================= */}
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="md:hidden text-[#e0a0c7] text-3xl p-2"
+              aria-label="Open menu"
+            >
+              {menuOpen ? <FaTimes /> : <FaBars />}
+            </button>
 
           </div>
+
+
+          {/* ================= MOBILE MENU ================= */}
+          {menuOpen && (
+            <div className="md:hidden border-t border-gray-700">
+
+              <nav className="flex flex-col py-5">
+
+                <a
+                  href="#home"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-4 py-4 font-bold hover:bg-[#222222] hover:text-[#e0a0c7] transition"
+                >
+                  HOME
+                </a>
+
+                <a
+                  href="#about"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-4 py-4 font-bold hover:bg-[#222222] hover:text-[#e0a0c7] transition"
+                >
+                  ABOUT
+                </a>
+
+                <a
+                  href="#recipes"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-4 py-4 font-bold hover:bg-[#222222] hover:text-[#e0a0c7] transition"
+                >
+                  RECIPES
+                </a>
+
+                <a
+                  href="#start"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-4 py-4 font-bold hover:bg-[#222222] hover:text-[#e0a0c7] transition"
+                >
+                  START HERE
+                </a>
+
+                <button
+                  className="
+                    flex
+                    items-center
+                    gap-3
+                    px-4
+                    py-4
+                    font-bold
+                    text-left
+                    hover:bg-[#222222]
+                    hover:text-[#e0a0c7]
+                    transition
+                  "
+                >
+                  <FaSearch />
+                  SEARCH
+                </button>
+
+              </nav>
+
+            </div>
+          )}
+
         </div>
+
       </header>
 
 
       {/* ================= HERO ================= */}
-      
- <section className="bg-[#111111] py-7 border-b border-gray-800">
+      <section className="bg-[#111111] py-7 border-b border-gray-800">
 
         <div className="text-center">
 
@@ -119,12 +176,10 @@ function App() {
 
       </section>
 
-
-
       {/* ================= RECIPES ================= */}
       <main
         id="recipes"
-        className="max-w-[1400px] mx-auto px-8 py-10"
+        className="max-w-[1400px] mx-auto px-6 md:px-8 py-10"
       >
 
         <div className="
@@ -139,15 +194,9 @@ function App() {
 
             <div
               key={index}
-              className="
-                group
-                relative
-                overflow-hidden
-                rounded-sm
-              "
+              className="group relative overflow-hidden"
             >
 
-              {/* IMAGE */}
               <img
                 src={recipe.image}
                 alt={recipe.category}
@@ -161,8 +210,7 @@ function App() {
                 "
               />
 
-
-              {/* DARK GRADIENT AT BOTTOM */}
+              {/* DARK GRADIENT */}
               <div className="
                 absolute
                 inset-x-0
@@ -171,32 +219,21 @@ function App() {
                 bg-gradient-to-t
                 from-black/70
                 to-transparent
-                pointer-events-none
               " />
 
-
-              {/* CATEGORY LABEL */}
-              <div className="
-                absolute
-                bottom-0
-                left-0
-                right-0
-                flex
-                justify-center
-              ">
+              {/* CATEGORY */}
+              <div className="absolute bottom-0 left-0 right-0 flex justify-center">
 
                 <span className="
                   bg-[#f2b53d]
                   text-white
                   px-8
                   py-4
-                  min-w-[150px]
-                  text-center
                   text-sm
                   md:text-base
                   font-bold
                   tracking-[0.2em]
-                  shadow-lg
+                  text-center
                 ">
                   {recipe.category}
                 </span>
@@ -213,28 +250,20 @@ function App() {
 
 
       {/* ================= FLOATING BUTTONS ================= */}
-
       <div className="
         fixed
-        right-6
-        bottom-8
+        right-5
+        bottom-6
         flex
         flex-col
         items-center
         gap-3
       ">
 
-        {/* NUMBER */}
-        <span className="
-          text-[#e0a0c7]
-          font-bold
-          text-sm
-        ">
+        <span className="text-[#e0a0c7] font-bold text-sm">
           181.7k
         </span>
 
-
-        {/* HEART */}
         <button className="
           w-14
           h-14
@@ -247,14 +276,10 @@ function App() {
           justify-center
           text-[#e0a0c7]
           text-xl
-          hover:scale-110
-          transition
         ">
           <FaHeart />
         </button>
 
-
-        {/* SEARCH */}
         <button className="
           w-14
           h-14
@@ -265,8 +290,6 @@ function App() {
           justify-center
           text-white
           text-xl
-          hover:scale-110
-          transition
         ">
           <FaSearch />
         </button>
