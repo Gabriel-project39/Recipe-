@@ -319,7 +319,7 @@ function RecipeCategories() {
             ">
 
               <img
-                src=""
+                src="https://pinchofyum.com/content/assets/images/sidebar/sidebar-freezer-meals-350x523.png"
                 alt="20 Healthy Freezer Meals"
                 className="
                   w-full
