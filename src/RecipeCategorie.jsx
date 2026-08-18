@@ -3,7 +3,7 @@ import { FaSearch, FaHeart } from "react-icons/fa";
 function RecipeCategories() {
   const recipes = [
     {
-      image: "/images/latest1.jpg",
+      image: "https://pinchofyum.com/tachyon/Crispy-Chicken-with-Lemon-Pasta-5.jpg?resize=800%2C800&zoom=0.5",
       date: "JULY 22, 2026",
       title: "Crispy Parmesan Chicken with Creamy Lemon Pasta",
       description:
@@ -11,7 +11,7 @@ function RecipeCategories() {
     },
 
     {
-      image: "/images/latest3.jpg",
+      image: "https://pinchofyum.com/tachyon/Smashed-Olives-with-Burrata-1-scaled.jpg?resize=800%2C800&zoom=0.5",
       date: "JULY 13, 2026",
       title: "Smashed Olives with Burrata",
       description:
@@ -19,7 +19,7 @@ function RecipeCategories() {
     },
 
     {
-      image: "/images/latest4.jpg",
+      image: "https://pinchofyum.com/tachyon/Summer-Produce-Recipes-02.jpg?resize=800%2C800&zoom=0.5",
       date: "JULY 8, 2026",
       title: "Creamy Chicken Pasta",
       description:
@@ -319,7 +319,7 @@ function RecipeCategories() {
             ">
 
               <img
-                src="/images/freezer-meals.jpg"
+                src=""
                 alt="20 Healthy Freezer Meals"
                 className="
                   w-full
