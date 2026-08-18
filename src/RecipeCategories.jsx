@@ -13,11 +13,11 @@ function RecipeCategories() {
     },
     {
       name: "VEGETARIAN",
-      image: "/images/vegetarian.jpg",
+      image: "https://pinchofyum.com/tachyon/Cauliflower-Black-Bean-Tostadas-4.jpg?resize=183%2C183&zoom=1",
     },
     {
       name: "HEALTHY",
-      image: "/images/healthy.jpg",
+      image: "https://pinchofyum.com/tachyon/Crunch-Roll-Bowls-2.jpg?resize=183%2C183&zoom=1",
     },
     {
       name: "INSTANT POT",
