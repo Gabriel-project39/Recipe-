@@ -21,11 +21,11 @@ function RecipeCategories() {
     },
     {
       name: "INSTANT POT",
-      image: "/images/instant-pot.jpg",
+      image: "https://pinchofyum.com/tachyon/Chicken-Tinga-Tacos-5.jpg?resize=183%2C183&zoom=1",
     },
     {
       name: "VEGAN",
-      image: "/images/vegan.jpg",
+      image: "https://pinchofyum.com/tachyon/Meal-Prep-Pasta-with-Cauliflower.jpg?resize=183%2C183&zoom=1",
     },
     {
       name: "MEAL PREP",
