@@ -37,7 +37,7 @@ function RecipeCategories() {
     },
     {
       name: "SALADS",
-      image: "/images/salads.jpg",
+      image: "https://pinchofyum.com/tachyon/Summer-Cobb-Salad-in-Bowl.jpg?resize=183%2C183&zoom=1",
     },
   ];
 
