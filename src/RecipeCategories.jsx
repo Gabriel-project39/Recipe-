@@ -29,11 +29,11 @@ function RecipeCategories() {
     },
     {
       name: "MEAL PREP",
-      image: "/images/meal-prep.jpg",
+      image: "https://pinchofyum.com/tachyon/Family-Style-Pitas-2.jpg?resize=183%2C183&zoom=1",
     },
     {
       name: "SOUPS",
-      image: "/images/soups.jpg",
+      image: "https://pinchofyum.com/tachyon/Carrot-Soup-with-Ground-Beef-1-4.jpg?resize=183%2C183&zoom=1",
     },
     {
       name: "SALADS",
