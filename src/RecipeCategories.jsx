@@ -5,11 +5,11 @@ function RecipeCategories() {
   const categories = [
     {
       name: "QUICK AND EASY",
-      image: "/images/quick.jpg",
+      image: "https://pinchofyum.com/tachyon/Gochujang-Noodles-3.jpg?resize=183%2C183&zoom=1",
     },
     {
       name: "DINNER",
-      image: "/images/dinner.jpg",
+      image: "https://pinchofyum.com/tachyon/Chicken-Caesar-Smash-Tacos.jpg?resize=183%2C183&zoom=1",
     },
     {
       name: "VEGETARIAN",
@@ -164,8 +164,13 @@ function RecipeCategories() {
 
         </div>
 
+
+
       </div>
     </section>
+
+
+
   );
 }
 
