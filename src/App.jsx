@@ -6,7 +6,7 @@ import { FaSearch, FaHeart, FaBars, FaTimes } from "react-icons/fa";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const recipes = [
+  const recipess = [
     {
       image: "https://pinchofyum.com/tachyon/Chicken-Caesar-Smash-Tacos.jpg?resize=840%2C1200&zoom=0.5",
       category: "DINNER",
