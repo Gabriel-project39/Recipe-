@@ -17,7 +17,7 @@ function RecipeCategories() {
       title: "Bang Bang Tofu",
     },
     {
-      image: "/images/vegetarian-dinners.jpg",
+      image: "https://pinchofyum.com/tachyon/Vegetarian-Dinners-2-02.jpg?resize=800%2C800&zoom=0.5",
       category: "VEGETARIAN",
       title: "45 Actually Delicious Vegetarian Dinner Recipes",
     },
