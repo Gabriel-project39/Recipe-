@@ -1,6 +1,7 @@
 import { useState } from "react";
 import RecipeCategories from "./RecipeCategories";
 import RecipeCategorie from "./RecipeCategorie";
+import PopularRecipes from "./PopularRecipes";
 import { FaSearch, FaHeart, FaBars, FaTimes } from "react-icons/fa";
 
 function App() {
@@ -302,6 +303,8 @@ function App() {
       {/* OTHER SECTIONS */}
 
    <RecipeCategorie />
+
+   <PopularRecipes />
     
     </div>
      
