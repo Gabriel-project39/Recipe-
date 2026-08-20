@@ -22,12 +22,12 @@ function RecipeCategories() {
       title: "45 Actually Delicious Vegetarian Dinner Recipes",
     },
     {
-      image: "/images/breakfast-burritos.jpg",
+      image: "https://pinchofyum.com/tachyon/Sheet-Pan-Breakfast-Burritos.jpg?resize=800%2C800&zoom=0.5",
       category: "BREAKFAST",
       title: "Sheet Pan Breakfast Burritos with Creamy Chipotle Sauce",
     },
     {
-      image: "/images/teriyaki-tofu.jpg",
+      image: "https://pinchofyum.com/tachyon/Teriyaki-Tofu-1.jpg?resize=800%2C800&zoom=0.5",
       category: "VEGETARIAN",
       title: "Teriyaki Tofu Bowls with Kimchi Mayo",
     },
