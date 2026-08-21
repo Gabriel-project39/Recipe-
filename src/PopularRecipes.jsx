@@ -64,24 +64,24 @@ function RecipeCategories() {
 
   const pinterestRecipes = [
     {
-      image: "/images/popular-1.jpg",
-      category: "POPULAR",
-      title: "Popular Recipe One",
+      image: "",
+      category: "DESSERTS",
+      title: "The Best Soft Chocolate Chip Cookies",
     },
     {
       image: "/images/popular-2.jpg",
-      category: "POPULAR",
-      title: "Popular Recipe Two",
+      category: "DINNER",
+      title: "Vegan Crunchwrap Supreme",
     },
     {
       image: "/images/popular-3.jpg",
-      category: "DINNER",
-      title: "Popular Recipe Three",
+      category: "ALL RECIPES",
+      title: "Slow Cooker Chicken Pot Pie Soup",
     },
     {
       image: "/images/popular-4.jpg",
-      category: "FAVORITE",
-      title: "Popular Recipe Four",
+      category: "FISH AND SEAFOOD",
+      title: "Spicy Shrimp Tacos With Garlie Cilantro Lime Slaw",
     },
   ];
 
