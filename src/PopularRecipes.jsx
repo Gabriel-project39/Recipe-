@@ -20,12 +20,12 @@ function RecipeCategories() {
       title: "45 Actually Delicious Vegetarian Dinner Recipes",
     },
     {
-      image: "/images/breakfast-burritos.jpg",
+      image: "https://pinchofyum.com/tachyon/Sheet-Pan-Breakfast-Burritos.jpg?resize=800%2C800&zoom=0.5",
       category: "BREAKFAST",
       title: "Sheet Pan Breakfast Burritos with Creamy Chipotle Sauce",
     },
     {
-      image: "/images/teriyaki-tofu.jpg",
+      image: "https://pinchofyum.com/tachyon/Teriyaki-Tofu-1.jpg?resize=800%2C800&zoom=0.5",
       category: "VEGETARIAN",
       title: "Teriyaki Tofu Bowls with Kimchi Mayo",
     },
@@ -37,12 +37,12 @@ function RecipeCategories() {
 
   const quickEasyRecipes = [
     {
-      image: "/images/chicken-caesar-smash-tacos.jpg",
+      image: "https://pinchofyum.com/tachyon/Chicken-Caesar-Smash-Tacos.jpg?resize=800%2C800&zoom=0.5",
       category: "TACOS",
       title: "Chicken Caesar Smash Tacos",
     },
     {
-      image: "/images/pizza-burgers.jpg",
+      image: "https://pinchofyum.com/tachyon/pizza-burgers-final-scaled.jpg?resize=800%2C800&zoom=0.5",
       category: "QUICK AND EASY",
       title: "Pizza Burgers",
     },
