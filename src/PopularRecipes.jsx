@@ -10,7 +10,7 @@ function RecipeCategories() {
 
   const vegetarianRecipes = [
     {
-      image: "/images/bang-bang-tofu.jpg",
+      image: "https://pinchofyum.com/tachyon/Bang-Bang-Tofu_LowRes-016.jpg?resize=800%2C800&zoom=0.5",
       category: "QUICK AND EASY",
       title: "Bang Bang Tofu",
     },
