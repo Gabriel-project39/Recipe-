@@ -4,42 +4,119 @@ import { FaHeart, FaSearch } from "react-icons/fa";
 function RecipeCategories() {
   const [activeTab, setActiveTab] = useState("VEGETARIAN");
 
+  // ============================
+  // VEGETARIAN
+  // ============================
+
+  const vegetarianRecipes = [
+    {
+      image: "/images/bang-bang-tofu.jpg",
+      category: "QUICK AND EASY",
+      title: "Bang Bang Tofu",
+    },
+    {
+      image: "/images/vegetarian-dinners.jpg",
+      category: "VEGETARIAN",
+      title: "45 Actually Delicious Vegetarian Dinner Recipes",
+    },
+    {
+      image: "/images/breakfast-burritos.jpg",
+      category: "BREAKFAST",
+      title: "Sheet Pan Breakfast Burritos with Creamy Chipotle Sauce",
+    },
+    {
+      image: "/images/teriyaki-tofu.jpg",
+      category: "VEGETARIAN",
+      title: "Teriyaki Tofu Bowls with Kimchi Mayo",
+    },
+  ];
+
+  // ============================
+  // QUICK + EASY
+  // ============================
+
+  const quickEasyRecipes = [
+    {
+      image: "/images/chicken-caesar-smash-tacos.jpg",
+      category: "TACOS",
+      title: "Chicken Caesar Smash Tacos",
+    },
+    {
+      image: "/images/pizza-burgers.jpg",
+      category: "QUICK AND EASY",
+      title: "Pizza Burgers",
+    },
+    {
+      image: "/images/easy-dinner-recipes.jpg",
+      category: "QUICK AND EASY",
+      title: "38 Easy Dinner Recipes For Real Life",
+    },
+    {
+      image: "/images/sheet-pan-dinners.jpg",
+      category: "SHEET PAN",
+      title: "20 Sheet Pan Dinners for Easy Weeknights",
+    },
+  ];
+
+  // ============================
+  // POPULAR ON PINTEREST
+  // ============================
+
+  const pinterestRecipes = [
+    {
+      image: "/images/popular-1.jpg",
+      category: "POPULAR",
+      title: "Popular Recipe One",
+    },
+    {
+      image: "/images/popular-2.jpg",
+      category: "POPULAR",
+      title: "Popular Recipe Two",
+    },
+    {
+      image: "/images/popular-3.jpg",
+      category: "DINNER",
+      title: "Popular Recipe Three",
+    },
+    {
+      image: "/images/popular-4.jpg",
+      category: "FAVORITE",
+      title: "Popular Recipe Four",
+    },
+  ];
+
+  // ============================
+  // SELECT RECIPES
+  // ============================
+
+  const recipeGroups = {
+    VEGETARIAN: vegetarianRecipes,
+    "QUICK + EASY": quickEasyRecipes,
+    "POPULAR ON PINTEREST": pinterestRecipes,
+  };
+
+  const recipes = recipeGroups[activeTab] || vegetarianRecipes;
+
+  // ============================
+  // TABS
+  // ============================
+
   const tabs = [
     "VEGETARIAN",
     "QUICK + EASY",
     "POPULAR ON PINTEREST",
   ];
 
-  const recipes = [
-    {
-      image: "https://pinchofyum.com/tachyon/Bang-Bang-Tofu_LowRes-016.jpg?resize=800%2C800&zoom=0.5",
-      category: "QUICK AND EASY",
-      title: "Bang Bang Tofu",
-    },
-    {
-      image: "https://pinchofyum.com/tachyon/Vegetarian-Dinners-2-02.jpg?resize=800%2C800&zoom=0.5",
-      category: "VEGETARIAN",
-      title: "45 Actually Delicious Vegetarian Dinner Recipes",
-    },
-    {
-      image: "https://pinchofyum.com/tachyon/Sheet-Pan-Breakfast-Burritos.jpg?resize=800%2C800&zoom=0.5",
-      category: "BREAKFAST",
-      title: "Sheet Pan Breakfast Burritos with Creamy Chipotle Sauce",
-    },
-    {
-      image: "https://pinchofyum.com/tachyon/Teriyaki-Tofu-1.jpg?resize=800%2C800&zoom=0.5",
-      category: "VEGETARIAN",
-      title: "Teriyaki Tofu Bowls with Kimchi Mayo",
-    },
-  ];
-
   return (
     <section className="bg-[#202020] text-white min-h-screen">
 
-      {/* TABS */}
+      {/* ================================= */}
+      {/* CATEGORY TABS */}
+      {/* ================================= */}
+
       <div className="pt-10">
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center">
 
           {tabs.map((tab) => (
             <button
@@ -48,34 +125,44 @@ function RecipeCategories() {
               className={`
                 relative
                 px-5
+                md:px-6
                 py-3
                 font-bold
                 text-sm
                 md:text-base
-                transition
+                tracking-wide
+                transition-colors
+                duration-200
+
                 ${
                   activeTab === tab
-                    ? "bg-[#81406f]"
-                    : "bg-[#292929] hover:bg-[#363636]"
+                    ? "bg-[#81406f] text-white"
+                    : "bg-[#292929] text-white hover:bg-[#353535]"
                 }
               `}
             >
               {tab}
+
+              {/* Triangle under active tab */}
 
               {activeTab === tab && (
                 <span
                   className="
                     absolute
                     left-1/2
-                    -bottom-2
+                    -bottom-[7px]
                     -translate-x-1/2
+
                     w-0
                     h-0
+
                     border-l-[10px]
                     border-l-transparent
+
                     border-r-[10px]
                     border-r-transparent
-                    border-t-[8px]
+
+                    border-t-[7px]
                     border-t-[#81406f]
                   "
                 />
@@ -84,15 +171,31 @@ function RecipeCategories() {
           ))}
 
         </div>
-
       </div>
 
+      {/* ================================= */}
+      {/* RECIPE GRID */}
+      {/* ================================= */}
 
-      {/* RECIPES */}
+      <div
+        className="
+          max-w-[1135px]
+          mx-auto
+          px-6
+          pt-10
+          pb-16
+        "
+      >
 
-      <div className="max-w-[1140px] mx-auto px-6 pt-10 pb-16">
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+        <div
+          className="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+            gap-2
+          "
+        >
 
           {recipes.map((recipe) => (
             <article
@@ -102,9 +205,21 @@ function RecipeCategories() {
 
               {/* IMAGE */}
 
-              <div className="relative h-[275px]">
+              <div
+                className="
+                  relative
+                  w-full
+                  h-[275px]
+                "
+              >
 
-                <div className="w-full h-full overflow-hidden">
+                <div
+                  className="
+                    w-full
+                    h-full
+                    overflow-hidden
+                  "
+                >
 
                   <img
                     src={recipe.image}
@@ -113,7 +228,9 @@ function RecipeCategories() {
                       w-full
                       h-full
                       object-cover
+
                       group-hover:scale-105
+
                       transition-transform
                       duration-500
                     "
@@ -121,48 +238,69 @@ function RecipeCategories() {
 
                 </div>
 
-
-                {/* CATEGORY */}
+                {/* CATEGORY LABEL */}
 
                 <div
                   className="
                     absolute
                     left-1/2
                     -translate-x-1/2
-                    -bottom-4
+                    -bottom-[18px]
+
                     bg-[#f0b84b]
+
                     px-6
                     py-2
+
+                    min-w-[140px]
+
+                    text-center
+
                     z-10
-                    whitespace-nowrap
                   "
                 >
-                  <span className="
-                    text-white
-                    text-xs
-                    font-bold
-                    tracking-[0.2em]
-                  ">
+
+                  <span
+                    className="
+                      text-white
+                      text-[11px]
+                      md:text-xs
+
+                      font-bold
+
+                      tracking-[0.2em]
+
+                      whitespace-nowrap
+                    "
+                  >
                     {recipe.category}
                   </span>
+
                 </div>
-
               </div>
-
 
               {/* TITLE */}
 
               <div className="pt-9 px-2">
 
-                <h3 className="
-                  font-serif
-                  font-bold
-                  text-xl
-                  md:text-[22px]
-                  leading-tight
-                  group-hover:text-[#e0a0c7]
-                  transition
-                ">
+                <h3
+                  className="
+                    font-serif
+                    font-bold
+
+                    text-xl
+                    md:text-[22px]
+
+                    leading-[1.15]
+
+                    text-white
+
+                    group-hover:text-[#e0a0c7]
+
+                    transition-colors
+                    duration-200
+                  "
+                >
                   {recipe.title}
                 </h3>
 
@@ -172,79 +310,95 @@ function RecipeCategories() {
           ))}
 
         </div>
-
       </div>
 
-
-      {/* NEXT SECTION */}
-
-      <div className="bg-[#555555] py-10">
-
-        <div className="max-w-[900px] mx-auto px-6">
-
-          <img
-            src="/images/next-section.jpg"
-            alt=""
-            className="
-              w-full
-              h-[150px]
-              object-cover
-            "
-          />
-
-        </div>
-
-      </div>
-
-
+      {/* ================================= */}
       {/* FLOATING BUTTONS */}
+      {/* ================================= */}
 
-      <div className="
-        fixed
-        right-5
-        bottom-24
-        z-50
-        flex
-        flex-col
-        items-center
-        gap-3
-      ">
+      <div
+        className="
+          fixed
+          right-5
+          bottom-24
 
-        <span className="
-          text-[#e0a0c7]
-          text-sm
-          font-bold
-        ">
+          z-50
+
+          flex
+          flex-col
+          items-center
+          gap-3
+        "
+      >
+
+        {/* COUNT */}
+
+        <span
+          className="
+            text-[#e0a0c7]
+            text-[13px]
+            font-bold
+          "
+        >
           181.8k
         </span>
 
-        <button className="
-          w-11
-          h-11
-          rounded-full
-          bg-[#111111]
-          border
-          border-gray-700
-          flex
-          items-center
-          justify-center
-          text-[#e0a0c7]
-          text-lg
-        ">
+        {/* HEART */}
+
+        <button
+          type="button"
+          className="
+            w-11
+            h-11
+
+            rounded-full
+
+            bg-[#111111]
+
+            border
+            border-gray-700
+
+            flex
+            items-center
+            justify-center
+
+            text-[#e0a0c7]
+
+            text-lg
+
+            hover:scale-110
+
+            transition-transform
+          "
+        >
           <FaHeart />
         </button>
 
-        <button className="
-          w-11
-          h-11
-          rounded-full
-          bg-[#81406f]
-          flex
-          items-center
-          justify-center
-          text-white
-          text-lg
-        ">
+        {/* SEARCH */}
+
+        <button
+          type="button"
+          className="
+            w-11
+            h-11
+
+            rounded-full
+
+            bg-[#81406f]
+
+            flex
+            items-center
+            justify-center
+
+            text-white
+
+            text-lg
+
+            hover:scale-110
+
+            transition-transform
+          "
+        >
           <FaSearch />
         </button>
 
