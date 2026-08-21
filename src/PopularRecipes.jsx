@@ -47,12 +47,12 @@ function RecipeCategories() {
       title: "Pizza Burgers",
     },
     {
-      image: "/images/easy-dinner-recipes.jpg",
+      image: "https://pinchofyum.com/tachyon/Easy-Dinner-Recipes-02.jpg?resize=800%2C800&zoom=0.5",
       category: "QUICK AND EASY",
       title: "38 Easy Dinner Recipes For Real Life",
     },
     {
-      image: "/images/sheet-pan-dinners.jpg",
+      image: "https://pinchofyum.com/tachyon/Sheet-Pan-Dinners-02.jpg?resize=800%2C800&zoom=0.5",
       category: "SHEET PAN",
       title: "20 Sheet Pan Dinners for Easy Weeknights",
     },
